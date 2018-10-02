@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 @import url("https://fonts.googleapis.com/css?family=Fahkwang:500");
 @import url("https://fonts.googleapis.com/css?family=Chakra+Petch:700");
+@import url("https://fonts.googleapis.com/css?family=KoHo:700");
 
 html,
 body {
@@ -11,8 +12,7 @@ body {
 html {
   display: table;
   margin: auto;
-  background: url(lib/72a184aa7846cad0d5a82cf55dc3f406.jpg) no-repeat center
-    center fixed;
+  background: url(lib/ezgif-5-cde2a9021.gif) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,8 +35,8 @@ body {
 }
 
 .header {
-  font-family: "Pacifico", cursive;
-  font-size: 24px;
+  font-family: "KoHo", sans-serif;
+  font-size: 36px;
   text-align: center;
   border-radius: 5px;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -46,41 +46,45 @@ body {
   animation: fadein 2s;
 }
 
-#todo_input {
+#bill-form {
+  margin-top: -10px;
+  font-size: 24px;
+}
+
+input {
+  margin: 10px;
+  border-radius: 8px;
+  width: 200px;
+}
+
+#amount-input {
   text-align: center;
   font-family: "Fahkwang", sans-serif;
   font-size: 14px;
   padding: 10px;
-  width: 90%;
   background: none;
   border-color: #355c7d;
 }
 
-ul {
+#people-input {
+  text-align: center;
   font-family: "Fahkwang", sans-serif;
-  border-radius: 5px;
-  min-width: 320px;
+  font-size: 14px;
+  padding: 10px;
+  background: none;
+  border-color: #355c7d;
 }
 
-li {
-  display: flex;
+#tip-input {
+  text-align: center;
+  font-family: "Fahkwang", sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  background: none;
+  border-color: #355c7d;
 }
 
-.completed {
-  text-decoration: line-through;
-  border-radius: 5px;
-}
-
-.close {
-  margin-left: auto;
-  padding: 5px;
-}
-
-.close:hover {
-  cursor: pointer;
-}
-
-.button {
+button {
   display: none;
 }
 
@@ -102,19 +106,4 @@ a {
 a:hover {
   cursor: pointer;
   color: #6c5c7b;
-}
-
-.message {
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 0;
-  font-size: 12px;
-  max-width: 250px;
-  min-height: 50px;
-  top: 20px;
-  left: 20px;
-  font-family: Georgia, serif;
-  font-style: italic;
-  letter-spacing: 0.1rem;
-  text-decoration: none;
 }
