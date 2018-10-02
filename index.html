@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>DineDash</title>
+  <link rel="shortcut icon" type="image/png" href="#" />
+  <link rel="stylesheet" type="text/css" href="master.css" media="screen" />
+  <script type="text/javascript" src="./lib/jberry.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div id="myDIV" class="header">
+    <h2>Bill Split</h2>
+    <form id='todo-form'>
+      <input id='todo_input' type="text" placeholder="How much was the bill?">
+      <br />
+      <input id='todo_input' type="text" placeholder="How many people?">
+      <br />
+      <input id='todo_input' type="text" placeholder="Tip amount"> or
+      <input id='todo_input' type="text" placeholder="Tip percent">
+      <button type="submit" class="button">Add</button>
+    </form>
+  </div>
+
+  <script>
+    // Add todo function
+    $b("#todo-form").on("submit", event => {
+      event.preventDefault();
+      const input = $b("#todo_input");
+      const val = input.array[0].value
+      input.array[0].value = "";
+      $b("#todo-ul").append(`<li>${val}</li>`);
+      $b($b('li').array[$b('li').array.length - 1]).append("<div class='close'>X</div>")
+      deleteItem()
+    });
+
+    // //crossed off todo item
+    // let todoList = $b('ul').array[0]
+    // $b(todoList).on('click', function(event) {
+    //   if ($b(event.target).attr("class") === "completed") {
+    //     $b(event.target).removeClass('completed')
+    //   } else {
+    //     $b(event.target).addClass('completed');
+    //   }
+    // })
+    //
+    // // delete item button
+    // let todoItems = $b('li').array
+    // for (todoItem of todoItems) {
+    //   $b(todoItem).append("<div class='close'>X</div>")
+    //   let closeButton = $b(todoItem).find("div")
+    // }
+    // //delete item function
+    //
+    // function deleteItem() {
+    //   let closeButtons = $b('.close').array
+    //   for (closeButton of closeButtons) {
+    //     closeButton.onclick = function() {
+    //       let div = this.parentElement;
+    //       div.style.display = "none";
+    //     }
+    //   }
+    // }
+
+
+    deleteItem()
+  </script>
+
+  <div class="credit">
+    Developed with jBerry<br />
+    by <a href="https://benpong.com/">Ben Pong</a>
+  </div>
+</body>
+
+</html>
