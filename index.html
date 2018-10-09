@@ -30,6 +30,11 @@
     // Bill calculating event submission listener
     $b("#bill-form").on("submit", event => {
       event.preventDefault();
+
+      if ($b(".calculated-amount").html()) {
+        $b(".calculated-amount").empty()
+      }
+
       let amountRaw = $b("#amount-input").array[0].value;
       let peopleRaw = $b("#people-input").array[0].value;
       let tipPercentRaw = $b("#tip-input").array[0].value;
