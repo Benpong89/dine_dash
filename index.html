@@ -51,7 +51,7 @@
       const people = Number(peopleRaw);
       const tipPercent = (Number(tipPercentRaw) / 100)
       const tipTotal = amount * tipPercent;
-      const perPerson = ((amount + tipTotal) / people.toFixed(2));
+      const perPerson = (((amount + tipTotal) / people).toFixed(2));
       $b(".calculated-amount").append(`$${perPerson}`);
     });
   </script>
